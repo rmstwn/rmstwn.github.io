@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rama | Robotics Research & Control Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .hero-gradient { background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%); }
+    </style>
+</head>
+<body class="bg-[#0b1120] text-slate-300 selection:bg-blue-500/30">
+
+    <nav class="fixed top-0 w-full z-50 glass">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="text-xl font-extrabold tracking-tighter text-white">RAMA<span class="text-blue-500">.</span></a>
+            <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest">
+                <a href="#about" class="hover:text-blue-400 transition">Research</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#tech" class="hover:text-blue-400 transition">Stack</a>
+                <a href="mailto:your-email@example.com" class="text-blue-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="relative pt-40 pb-20 px-6 max-w-6xl mx-auto hero-gradient">
+        <div class="md:w-3/4">
+            <h2 class="text-blue-500 font-mono text-sm tracking-widest mb-4 uppercase">PhD Researcher • Japan</h2>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-none">
+                Compliance Control for <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Manipulators.</span>
+            </h1>
+            <p class="text-lg text-slate-400 mb-10 max-w-2xl leading-relaxed">
+                Currently specializing in **Impedance Control** using ROS 2, C++, and Python. 
+                Applying deep hardware integration experience to solve complex robotic assembly challenges.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-blue-600/20">Explore Projects</a>
+                <a href="https://github.com/your-username" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold transition">GitHub Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="mb-16">
+            <h3 class="text-3xl font-bold text-white mb-2">Research & Development</h3>
+            <div class="h-1 w-20 bg-blue-500 rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="group bg-slate-900/50 rounded-3xl border border-white/5 overflow-hidden hover:border-blue-500/30 transition-all duration-500">
+                <div class="aspect-video bg-slate-950 relative">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-700">
+                        <source src="assets/videos/compliance-demo.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="p-8">
+                    <span class="text-blue-500 text-[10px] font-bold tracking-[0.2em] uppercase">Control Theory</span>
+                    <h4 class="text-2xl font-bold text-white mt-2 mb-4">Adaptive Impedance Control</h4>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed text-justify">
+                        Implemented a gain-tuning model with attention mechanisms for multi-manipulator systems. 
+                        Validated using Kinova Gen3 Lite arms on a ceiling-mounted rail system.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-[10px] text-slate-300">C++</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-[10px] text-slate-300">ROS 2</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-[10px] text-slate-300">PINOCCHIO</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group bg-slate-900/50 rounded-3xl border border-white/5 overflow-hidden hover:border-blue-500/30 transition-all duration-500">
+                <div class="aspect-video bg-slate-950 flex items-center justify-center p-12">
+                   <i class="fa-solid fa-robot text-7xl text-slate-800 group-hover:text-blue-500/50 transition duration-500"></i>
+                </div>
+                <div class="p-8">
+                    <span class="text-emerald-500 text-[10px] font-bold tracking-[0.2em] uppercase">Hardware Integration</span>
+                    <h4 class="text-2xl font-bold text-white mt-2 mb-4">Robotics Assembly & Integration</h4>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed text-justify">
+                        Direct hands-on experience in the assembly and calibration of industrial robots. 
+                        Bridging the gap between physical hardware constraints and software control logic.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-[10px] text-slate-300">CALIBRATION</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-[10px] text-slate-300">HARDWARE</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-[10px] text-slate-300">ASSEMBLY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="py-20 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h5 class="text-white font-bold mb-4">Software</h5>
+                    <ul class="text-sm space-y-2 text-slate-500">
+                        <li>Modern C++</li>
+                        <li>Python (Scientific)</li>
+                        <li>ROS 2 / Middleware</li>
+                        <li>Linux / Docker</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Mathematics</h5>
+                    <ul class="text-sm space-y-2 text-slate-500">
+                        <li>Dynamics (Pinocchio)</li>
+                        <li>Optimization (CasADi)</li>
+                        <li>Impedance/Compliance</li>
+                        <li>Simulation (MuJoCo)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Education</h5>
+                    <ul class="text-sm space-y-2 text-slate-500">
+                        <li>PhD Robotics (In Progress)</li>
+                        <li>Master's Degree (Japan)</li>
+                        <li>Adaptive Gain Models</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Connect</h5>
+                    <div class="flex gap-4 text-xl">
+                        <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-blue-400 transition"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-[10px] text-slate-600 uppercase tracking-[0.3em]">
+        &copy; 2026 Rama • Robotics Portfolio
+    </footer>
+
+</body>
+</html>
