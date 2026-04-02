@@ -4,22 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rama | Robotics Research & Control Systems</title>
+    <title>Rama Setyawan | Robotics Research & Assembly Engineering</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81JP5D3HX0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-81JP5D3HX0');
-    </script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
@@ -28,17 +16,26 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        /* Subtle glow over your Kinova background image */
-        .hero-gradient {
-            background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 60%);
+        .hero-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
         }
 
-        /* Responsive adjustments for glass effect */
         .glass {
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(11, 17, 32, 0.9);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .bento-card {
+            background: rgba(15, 23, 42, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bento-card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-4px);
+            background: rgba(15, 23, 42, 0.6);
         }
     </style>
 </head>
@@ -49,200 +46,423 @@
         <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
             <a href="#" class="text-xl font-extrabold tracking-tighter text-white">Rama Setyawan<span
                     class="text-blue-500">.</span></a>
-            <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest">
-                <a href="#about" class="hover:text-blue-400 transition text-white">Research</a>
-                <a href="#projects" class="hover:text-blue-400 transition text-white">Projects</a>
-                <a href="#tech" class="hover:text-blue-400 transition text-white">Stack</a>
+            <div class="hidden md:flex space-x-10 text-[10px] items-center font-black uppercase tracking-[0.2em]">
+                <a href="#about" class="hover:text-blue-400 transition text-white">Biography</a>
+                <a href="#tech" class="hover:text-blue-400 transition text-white">Ecosystem</a>
+                <a href="#timeline" class="hover:text-blue-400 transition text-white">Timeline</a>
+                <a href="#awards" class="hover:text-blue-400 transition text-white leading-none">Awards</a>
+                <a href="#research" class="hover:text-blue-400 transition text-white">Research</a>
                 <a href="mailto:rmstwn@gmail.com"
                     class="text-blue-500 border border-blue-500/20 px-4 py-2 rounded-full hover:bg-blue-500/10 transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section id="about" class="relative pt-40 pb-20 px-6 max-w-6xl mx-auto hero-gradient">
-        <div class="md:w-3/4">
-            <h2 class="text-blue-500 font-mono text-sm tracking-widest mb-4 uppercase">
-                PhD Student @ Tokyo Metropolitan University
-            </h2>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-none tracking-tight">
-                Compliance Control for <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Manipulators.</span>
-            </h1>
-            <p class="text-lg text-slate-400 mb-10 max-w-2xl leading-relaxed text-justify md:text-left">
-                PhD Researcher at <strong>Tokyo Metropolitan University</strong> specializing in Adaptive Impedance
-                Control.
-                Currently bridging the gap between theory and production as a <strong>Robot Assembly Intern at
-                    Telexistence
-                    Inc.</strong>,
-                where I focus on the hardware-software integration of industrial manipulator systems.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="#projects"
-                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-blue-600/20">Explore
-                    Projects</a>
-                <a href="https://github.com/rmstwn"
-                    class="bg-slate-800/80 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold transition backdrop-blur-sm border border-white/5">GitHub
-                    Profile</a>
+    <section id="about" class="relative pt-40 pb-24 px-6 max-w-6xl mx-auto hero-glow">
+        <div class="grid lg:grid-cols-12 gap-16 items-center">
+            <div class="lg:col-span-4 relative group">
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000">
+                </div>
+                <div
+                    class="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/10 bg-slate-900 shadow-2xl">
+                    <img src="assets/img/profile.jpg" alt="Rama Setyawan"
+                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+            </div>
+            <div class="lg:col-span-8">
+                <h2 class="text-blue-500 font-mono text-[10px] tracking-[0.4em] mb-4 uppercase font-black">PhD Candidate
+                    & Robotics Engineer</h2>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-none tracking-tight">
+                    Sensorless <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Compliance.</span>
+                </h1>
+                <p class="text-lg text-slate-400 mb-8 leading-relaxed text-justify">
+                    PhD researcher at the <strong>Robotics and Mechatronics Laboratory (Takesue Lab)</strong> at
+                    <strong>Tokyo Metropolitan University</strong>.
+                    Specializing in <strong>Sensorless Adaptive Compliance Control</strong>, I focus on enabling
+                    redundant manipulators to interact safely using high-speed dynamics in <strong>C++ 20</strong> and
+                    <strong>ROS 2</strong>.
+                    My academic research is grounded by my industrial role as a <strong>Robot Assembly Engineer
+                        (Intern)</strong> at <strong>Telexistence Inc.</strong>, where I contribute to the
+                    high-precision assembly and hardware validation of <strong>Ghost Team</strong> robotic systems.
+                    This combination of theoretical control and hands-on mechanical engineering ensures my research is
+                    built on a first-principles understanding of real-world robotic hardware.
+                </p>
+                <div class="flex gap-6 text-2xl text-slate-500">
+                    <a href="https://github.com/rmstwn" target="_blank" class="hover:text-white transition"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ramasetyawan" target="_blank"
+                        class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:rmstwn@gmail.com" class="hover:text-white transition"><i
+                            class="fa-solid fa-envelope"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="mb-16">
-            <h3 class="text-3xl font-bold text-white mb-2">Research & Development</h3>
-            <div class="h-1 w-20 bg-blue-500 rounded-full"></div>
+    <section id="tech" class="py-24 px-6 max-w-6xl mx-auto border-t border-white/5">
+        <div class="flex items-center gap-4 mb-16">
+            <div class="p-3 bg-blue-500/10 rounded-xl border border-blue-500/20">
+                <i class="fa-solid fa-layer-group text-xl text-blue-500"></i>
+            </div>
+            <h2 class="text-3xl font-black text-white">Technical Ecosystem</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <a href="projects/adaptive-compliance.html"
-                class="group bg-slate-900/40 rounded-3xl border border-white/5 overflow-hidden hover:border-blue-500/30 transition-all duration-500 backdrop-blur-md flex flex-col cursor-pointer relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bento-card p-8 rounded-3xl">
+                <h4 class="text-blue-500 text-[10px] font-black uppercase tracking-widest mb-6">Core Software</h4>
+                <ul class="space-y-4 text-xs font-medium">
+                    <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-code text-slate-500"></i>
+                        Modern C++ (20)</li>
+                    <li class="flex items-center gap-3 text-white"><i class="fa-brands fa-python text-slate-500"></i>
+                        Python / NumPy</li>
+                    <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-terminal text-slate-500"></i>
+                        Linux (Ubuntu)</li>
+                    <li class="flex items-center gap-3 text-white"><i
+                            class="fa-solid fa-box-archive text-slate-500"></i> Git / Docker</li>
+                </ul>
+            </div>
+            <div class="bento-card p-8 rounded-3xl lg:col-span-1">
+                <h4 class="text-blue-500 text-[10px] font-black uppercase tracking-widest mb-6">Robotics & Control</h4>
+                <ul class="space-y-4 text-xs font-medium">
+                    <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-robot text-slate-500"></i> ROS
+                        2 (Humble)</li>
+                    <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-gears text-slate-500"></i>
+                        Pinocchio / CasADi</li>
+                    <li class="flex items-center gap-3 text-white"><i
+                            class="fa-solid fa-wave-square text-slate-500"></i> MATLAB / Simulink</li>
+                    <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-bullseye text-slate-500"></i>
+                        Impedance Control</li>
+                </ul>
+            </div>
+            <div class="bento-card p-8 rounded-3xl border-emerald-500/10 hover:border-emerald-500/30">
+                <h4 class="text-emerald-500 text-[10px] font-black uppercase tracking-widest mb-6">Hardware & Assembly
+                </h4>
+                <ul class="space-y-4 text-xs font-medium">
+                    <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-microchip text-slate-500"></i>
+                        STM32 / Embedded C</li>
+                    <li class="flex items-center gap-3 text-white"><i
+                            class="fa-solid fa-screwdriver-wrench text-slate-500"></i> Precision Assembly</li>
+                    <li class="flex items-center gap-3 text-white"><i
+                            class="fa-solid fa-network-wired text-slate-500"></i> CAN / EtherCAT</li>
+                    <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-bolt text-slate-500"></i>
+                        Hardware Validation</li>
+                </ul>
+            </div>
+            <div class="bento-card p-8 rounded-3xl">
+                <h4 class="text-blue-500 text-[10px] font-black uppercase tracking-widest mb-6">Simulation & Modeling
+                </h4>
+                <ul class="space-y-4 text-xs font-medium">
+                    <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-cube text-slate-500"></i>
+                        Fusion 360</li>
+                    <li class="flex items-center gap-3 text-white"><i
+                            class="fa-solid fa-vr-cardboard text-slate-500"></i> MuJoCo / Gazebo</li>
+                    <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-file-code text-slate-500"></i>
+                        URDF Modeling</li>
+                    <li class="flex items-center gap-3 text-white"><i
+                            class="fa-solid fa-window-maximize text-slate-500"></i> VB.NET Logic</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-                <div class="aspect-video bg-slate-950 relative z-10">
-                    <video autoplay loop muted playsinline
-                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700">
-                        <source src="assets/videos/compliance-demo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div
-                        class="absolute top-4 right-4 bg-blue-500/20 text-blue-400 text-[8px] px-2 py-1 rounded border border-blue-500/20 uppercase font-black tracking-widest backdrop-blur-md">
-                        PhD Research
+    <section id="timeline" class="py-24 bg-slate-950/40 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-6">
+
+            <div class="mb-24">
+                <div class="flex items-center gap-4 mb-16">
+                    <div class="p-3 bg-white/5 rounded-xl border border-white/10">
+                        <i class="fa-solid fa-briefcase text-xl text-white"></i>
+                    </div>
+                    <h2 class="text-2xl font-black text-white">Industrial & Lab Experience</h2>
+                </div>
+                <div class="space-y-12 border-l-2 border-white/5 ml-6">
+                    <div class="relative pl-10">
+                        <div
+                            class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-[9px] top-1 border-4 border-[#0b1120] shadow-[0_0_15px_rgba(16,185,129,0.4)]">
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Telexistence Inc.</h3>
+                                <p class="text-emerald-500 text-[10px] font-black uppercase tracking-widest">Ghost Team
+                                    | Robot Assembly Engineer (Intern)</p>
+                            </div>
+                            <span class="text-slate-500 text-[10px] font-mono">📅 Apr 2024 — Ongoing</span>
+                        </div>
+                        <p class="mt-4 text-sm text-slate-400 leading-relaxed">Contributing to precision assembly and
+                            hardware calibration of industrial manipulators. Gaining first-principles insight into
+                            mechanical constraints to inform adaptive control research.</p>
+                    </div>
+                    <div class="relative pl-10">
+                        <div
+                            class="absolute w-4 h-4 bg-slate-800 rounded-full -left-[9px] top-1 border-4 border-[#0b1120]">
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-2">
+                            <h3 class="text-lg font-bold text-white">RoISC Laboratory</h3>
+                            <span class="text-slate-500 text-[10px] font-mono">📅 2021 — 2022</span>
+                        </div>
+                        <p class="text-slate-500 text-[10px] font-black uppercase tracking-widest mt-1">Research
+                            Assistant</p>
+                        <p class="mt-4 text-sm text-slate-400 leading-relaxed">Researched humanoid kinematics and visual
+                            grasping systems for 7-DOF manipulators.</p>
+                    </div>
+                    <div class="relative pl-10">
+                        <div
+                            class="absolute w-4 h-4 bg-slate-800 rounded-full -left-[9px] top-1 border-4 border-[#0b1120]">
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-2">
+                            <h3 class="text-lg font-bold text-white">Robotics Instructor</h3>
+                            <span class="text-slate-500 text-[10px] font-mono whitespace-nowrap">📅 2018 — 2020</span>
+                        </div>
+                        <p class="text-slate-500 text-[10px] font-black uppercase tracking-widest mt-1">Adroit Robotics
+                            • RoISC Laboratory</p>
+                        <p class="mt-4 text-sm text-slate-400 leading-relaxed">Coached elementary to high school teams
+                            for national robotics competitions.</p>
+                    </div>
+                    <div class="relative pl-10">
+                        <div
+                            class="absolute w-4 h-4 bg-slate-800 rounded-full -left-[9px] top-1 border-4 border-[#0b1120]">
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-2">
+                            <h3 class="text-lg font-bold text-white">Engineer Intern</h3>
+                            <span class="text-slate-500 text-[10px] font-mono whitespace-nowrap">📅 2018 — 2019</span>
+                        </div>
+                        <p class="text-slate-500 text-[10px] font-black uppercase tracking-widest mt-1">PT. Jatim
+                            Autocomp Indonesia</p>
+                        <p class="mt-4 text-sm text-slate-400 leading-relaxed">Built VB.NET desktop tools for industrial
+                            data digitization.</p>
+                    </div>
+                    <div class="relative pl-10">
+                        <div
+                            class="absolute w-4 h-4 bg-slate-800 rounded-full -left-[9px] top-1 border-4 border-[#0b1120]">
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-2">
+                            <h3 class="text-lg font-bold text-white">IT Intern</h3>
+                            <span class="text-slate-500 text-[10px] font-mono whitespace-nowrap">📅 2015 — 2016</span>
+                        </div>
+                        <p class="text-slate-500 text-[10px] font-black uppercase tracking-widest mt-1">PT. Güntner
+                            Indonesia</p>
+                        <p class="mt-4 text-sm text-slate-400 leading-relaxed">BManaged industrial network
+                            infrastructure and computer hardware maintenance, ensuring uptime
+                            for critical corporate communication systems.</p>
                     </div>
                 </div>
+            </div>
 
-                <div class="p-8 flex flex-col flex-grow relative">
-                    <div class="relative z-10">
-                        <span class="text-blue-500 text-[10px] font-black tracking-[0.2em] uppercase">Control
-                            Theory</span>
-                        <h4 class="text-2xl font-bold text-white mt-2 mb-4 group-hover:text-blue-400 transition">
-                            Adaptive Compliance Control</h4>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed text-justify">
-                            Developing <strong>attention-based gain modulation</strong> for multi-arm manipulators.
-                            Optimizing
-                            interaction safety in uncertain environments, validated on <strong>Kinova Gen3 Lite</strong>
-                            systems.
-                        </p>
-
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span
-                                class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded text-[10px] text-blue-300 font-mono">C++
-                                20</span>
-                            <span
-                                class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded text-[10px] text-blue-300 font-mono">ROS
-                                2</span>
-                            <span
-                                class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded text-[10px] text-blue-300 font-mono">Pinocchio</span>
-                        </div>
-
+            <div>
+                <div class="flex items-center gap-4 mb-16">
+                    <div class="p-3 bg-white/5 rounded-xl border border-white/10">
+                        <i class="fa-solid fa-graduation-cap text-xl text-white"></i>
+                    </div>
+                    <h2 class="text-2xl font-black text-white">Academic Journey</h2>
+                </div>
+                <div class="space-y-12 border-l-2 border-white/5 ml-6">
+                    <div class="relative pl-10">
                         <div
-                            class="mt-auto flex items-center justify-center w-full px-6 py-3 bg-white/5 group-hover:bg-blue-600 text-white text-[10px] font-black rounded-xl transition-all border border-white/10 group-hover:border-blue-500 tracking-widest">
-                            VIEW TECHNICAL CASE STUDY
-                            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                            class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1 border-4 border-[#0b1120]">
                         </div>
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Tokyo Metropolitan University, PhD</h3>
+                                <p class="text-blue-500 text-[10px] font-black uppercase tracking-widest mt-1">Takesue
+                                    Laboratory</p>
+                            </div>
+                            <span class="text-slate-500 text-[10px] font-mono whitespace-nowrap">📅 2024 —
+                                Present</span>
+                        </div>
+                        <ul class="mt-4 text-sm text-slate-500 space-y-2 list-none italic">
+                            <li>• Sensorless Collision Detection for Collaborative Robots.</li>
+                            <li>• Compliance Control of Redundant Manipulators.</li>
+                        </ul>
+                    </div>
+                    <div class="relative pl-10 opacity-60">
+                        <div
+                            class="absolute w-4 h-4 bg-slate-800 rounded-full -left-[9px] top-1 border-4 border-[#0b1120]">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-white leading-tight">Tokyo Metropolitan University, Master
+                                of Engineering</h3>
+                            <span class="text-slate-500 text-[10px] font-mono">📅 2022 — 2024</span>
+                        </div>
+                        <p class="text-slate-500 text-xs mt-1">Major: Mechanical Systems Engineering.</p>
+                    </div>
+                    <div class="relative pl-10 opacity-60">
+                        <div
+                            class="absolute w-4 h-4 bg-slate-800 rounded-full -left-[9px] top-1 border-4 border-[#0b1120]">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-white leading-tight">PENS Surabaya, Bachelor of
+                                Engineering</h3>
+                            <span class="text-slate-500 text-[10px] font-mono">📅 2017 — 2021</span>
+                        </div>
+                        <p class="text-slate-500 text-xs mt-1">Major: Computer Engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="awards" class="py-24 px-6 max-w-6xl mx-auto border-t border-white/5">
+        <div class="flex items-center gap-4 mb-16">
+            <div class="p-3 bg-emerald-500/10 rounded-xl border border-emerald-500/20">
+                <i class="fa-solid fa-award text-xl text-emerald-500"></i>
+            </div>
+            <h2 class="text-3xl font-black text-white">Recognition & Funding</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <div
+                class="p-8 bg-slate-900/20 border border-white/5 rounded-3xl hover:border-emerald-500/30 transition duration-500">
+                <h4 class="text-emerald-500 text-[10px] font-black uppercase tracking-widest mb-8">Scholarships & Grants
+                </h4>
+                <div class="space-y-8">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h5 class="text-white font-bold text-sm">MEXT Scholarship Awardee</h5>
+                            <span class="text-slate-500 text-[10px] font-mono">2022</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1">Japanese Government (Monbukagakusho) scholarship for
+                            higher education research.</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h5 class="text-white font-bold text-sm">PENS Innovation Fund</h5>
+                            <span class="text-slate-500 text-[10px] font-mono">2020</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1">Grant for COVID-19 solution development via PENS
+                            Innovation Contest.</p>
+                    </div>
+                    <div class="opacity-60">
+                        <div class="flex justify-between items-start">
+                            <h5 class="text-white font-bold text-sm">BIDIKMISI Scholarship</h5>
+                            <span class="text-slate-500 text-[10px] font-mono">2017 — 2021</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1">Excellence scholarship issued by RISTEKDIKTI for
+                            high-potential students.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="p-8 bg-slate-900/20 border border-white/5 rounded-3xl hover:border-blue-500/30 transition duration-500">
+                <h4 class="text-blue-500 text-[10px] font-black uppercase tracking-widest mb-8">Competitive Honors</h4>
+                <div class="space-y-8">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h5 class="text-white font-bold text-sm">1st Winner — Creativity Station</h5>
+                            <span class="text-slate-500 text-[10px] font-mono">2020</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1 uppercase tracking-tighter">Pusan National University
+                            (Korea) × Indonesia</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h5 class="text-white font-bold text-sm">2nd Winner — Final Project Competition</h5>
+                            <span class="text-slate-500 text-[10px] font-mono">2021</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1 uppercase tracking-tighter">PENS Surabaya Graduate
+                            Excellence</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h5 class="text-white font-bold text-sm">Kontes Robot Indonesia (KRI)</h5>
+                            <span class="text-slate-500 text-[10px] font-mono">2018 — 2019</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1 italic uppercase tracking-tighter">PENSAE Team • 1st
+                            Runner UP (Regional IV) & National Participant</p>
+                    </div>
+                    <div class="opacity-60">
+                        <div class="flex justify-between items-start">
+                            <h5 class="text-white font-bold text-sm">Academic Best Student</h5>
+                            <span class="text-slate-500 text-[10px] font-mono">2017</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1">1st Ranked Graduate • SMK YADIKA Bangil</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="research" class="py-24 px-6 max-w-6xl mx-auto border-t border-white/5">
+        <div class="flex items-center gap-4 mb-16">
+            <div class="p-3 bg-blue-500/10 rounded-xl border border-blue-500/20">
+                <i class="fa-solid fa-microscope text-xl text-blue-500"></i>
+            </div>
+            <h2 class="text-3xl font-black text-white">Selected Research</h2>
+        </div>
+
+        <div class="grid md:grid-cols-1 gap-10">
+            <a href="projects/adaptive-compliance.html"
+                class="group bg-slate-900/40 rounded-3xl border border-white/5 overflow-hidden hover:border-blue-500/30 transition-all duration-500 backdrop-blur-md flex flex-col md:flex-row relative shadow-2xl">
+                <div class="md:w-1/2 aspect-video bg-slate-950 relative overflow-hidden">
+                    <video autoplay loop muted playsinline
+                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700 scale-105 group-hover:scale-100">
+                        <source src="assets/videos/compliance-demo.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="p-10 md:w-1/2 flex flex-col justify-center">
+                    <span class="text-blue-500 text-[10px] font-black tracking-[0.2em] uppercase">Control
+                        Framework</span>
+                    <h4 class="text-3xl font-bold text-white mt-2 mb-4 group-hover:text-blue-400 transition">Sensorless
+                        Adaptive Compliance</h4>
+                    <p class="text-slate-400 text-sm mb-8 leading-relaxed">Developing real-time dynamics frameworks for
+                        Kinova systems. Specializing in compliant interaction without external force sensors using
+                        Pinocchio RNEA.</p>
+                    <div
+                        class="inline-flex items-center text-white text-[10px] font-black tracking-widest uppercase group-hover:translate-x-2 transition-transform">
+                        Explore Technical Study <i class="fa-solid fa-arrow-right ml-3 text-blue-500"></i>
                     </div>
                 </div>
             </a>
-
-            <div
-                class="group bg-slate-900/40 rounded-3xl border border-white/5 overflow-hidden hover:border-emerald-500/30 transition-all duration-500 backdrop-blur-md flex flex-col">
-                <div class="aspect-video bg-slate-950 flex flex-col items-center justify-center p-12 relative">
-                    <i
-                        class="fa-solid fa-screwdriver-wrench text-7xl text-slate-800 group-hover:text-emerald-500/50 transition duration-500"></i>
-                    <div
-                        class="absolute top-4 right-4 bg-emerald-500/20 text-emerald-400 text-[8px] px-2 py-1 rounded border border-emerald-500/20 uppercase font-bold tracking-widest backdrop-blur-md">
-                        Industry
-                    </div>
-                </div>
-
-                <div class="p-8 flex flex-col flex-grow">
-                    <span class="text-emerald-500 text-[10px] font-bold tracking-[0.2em] uppercase">Robot Assembly
-                        Intern</span>
-                    <h4 class="text-2xl font-bold text-white mt-2 mb-4">Industrial Robot Integration</h4>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed text-justify">
-                        Direct hands-on assembly, hardware calibration, and software-hardware integration for
-                        large-scale manipulator systems at <strong>Telexistence Inc</strong>. Bridging theoretical
-                        control with
-                        physical reliability.
-                    </p>
-
-                    <div class="flex flex-wrap gap-2 mb-8">
-                        <span
-                            class="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-md text-[10px] text-emerald-300 uppercase font-mono">Hardware</span>
-                        <span
-                            class="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-md text-[10px] text-emerald-300 uppercase font-mono">Calibration</span>
-                        <span
-                            class="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-md text-[10px] text-emerald-300 uppercase font-mono">Assembly</span>
-                    </div>
-
-                    <a href="mailto:rmstwn@gmail.com"
-                        class="mt-auto flex items-center justify-center w-full px-6 py-3 bg-white/5 hover:bg-emerald-600 text-white text-[10px] font-bold rounded-xl transition-all border border-white/10 hover:border-emerald-500 group/btn tracking-widest">
-                        INQUIRE FOR DETAILS
-                        <i class="fa-solid fa-envelope ml-2 group-hover:scale-110 transition-transform"></i>
-                    </a>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <section id="tech" class="py-20 border-t border-white/5 bg-slate-950/20 backdrop-blur-sm">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-                <div>
-                    <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Software</h5>
-                    <ul class="text-sm space-y-2 text-slate-500">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-code text-blue-500 text-[10px]"></i>
-                            Modern C++</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-code text-blue-500 text-[10px]"></i>
-                            Python / NumPy</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-code text-blue-500 text-[10px]"></i>
-                            ROS 1 / ROS 2 (Humble/Foxy)</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-code text-blue-500 text-[10px]"></i>
-                            Linux / Git</li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Robotics</h5>
-                    <ul class="text-sm space-y-2 text-slate-500">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-gears text-blue-500 text-[10px]"></i>
-                            Pinocchio / CasADi</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-gears text-blue-500 text-[10px]"></i>
-                            MuJoCo / Gazebo</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-gears text-blue-500 text-[10px]"></i>
-                            Impedance Control</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-gears text-blue-500 text-[10px]"></i>
-                            Kinova Manipulators</li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Experience</h5>
-                    <div class="space-y-4">
-                        <p class="text-[11px] text-slate-400">
-                            <span class="text-white font-bold">PhD Candidate</span><br>
-                            Tokyo Metropolitan University
-                        </p>
-                        <p class="text-[11px] text-slate-400">
-                            <span class="text-white font-bold">Robotics Engineer Intern</span><br>
-                            Telexistence Inc.
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Connect</h5>
-                    <div class="flex gap-6 text-2xl">
-                        <a href="https://github.com/rmstwn" class="hover:text-blue-400 transition hover:scale-110"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/ramasetyawan/"
-                            class="hover:text-blue-400 transition hover:scale-110"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:rmstwn@gmail.com" class="hover:text-blue-400 transition hover:scale-110"><i
-                                class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
+    <section id="publications" class="py-24 px-6 max-w-6xl mx-auto border-t border-white/5">
+        <div class="flex items-center gap-4 mb-16">
+            <div class="p-3 bg-white/5 rounded-xl border border-white/10">
+                <i class="fa-solid fa-book text-xl text-white"></i>
+            </div>
+            <h2 class="text-3xl font-black text-white">Peer-Reviewed Publications</h2>
+        </div>
+        <div class="grid gap-6">
+            <div class="p-8 bg-slate-900/20 border border-white/5 rounded-3xl hover:bg-slate-900/40 transition">
+                <span class="text-[10px] font-mono text-blue-500 uppercase tracking-widest">Robomech 2024 • Japan</span>
+                <h4 class="text-lg font-bold text-white mt-2">Force Sensorless Collision Detection and Dynamics
+                    Identification Based on Gravity and Friction Term</h4>
+                <p class="text-[11px] text-slate-500 mt-2 italic">M. R. H. Setyawan, M. Nishimura, M. Sekiguchi, N.
+                    Takesue</p>
+            </div>
+            <div class="p-8 bg-slate-900/20 border border-white/5 rounded-3xl hover:bg-slate-900/40 transition">
+                <span class="text-[10px] font-mono text-blue-500 uppercase tracking-widest">IJECE 2023</span>
+                <h4 class="text-lg font-bold text-white mt-2">Kinematics modeling of 6-DOF humanoid robot arm using
+                    improved DLS for visual grasping</h4>
+                <p class="text-[11px] text-slate-500 mt-2 italic">M. R. H. Setyawan, R. S. Dewanto, et al.</p>
+            </div>
+            <div class="p-8 bg-slate-900/20 border border-white/5 rounded-3xl hover:bg-slate-900/40 transition">
+                <span class="text-[10px] font-mono text-blue-500 uppercase tracking-widest">IEEE - International
+                    Electronics Symposium (IES) Conference 2021 • Indonesia</span>
+                <h4 class="text-lg font-bold text-white mt-2">Improved Damped Least Squares Inverse Kinematics with
+                    Joint limits for 7-DOF "T-FLoW" Humanoid Robot Manipulator</h4>
+                <p class="text-[11px] text-slate-500 mt-2 italic">M. R. H. Setyawan, R. S. Dewanto, et al.</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-[10px] text-slate-600 uppercase tracking-[0.4em] border-t border-white/5">
-        &copy; 2026 Rama Setyawan • Tokyo Metropolitan University
+    <footer id="contact" class="pt-32 pb-12 px-6 max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-8">Ready to build the <br><span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-500">future of
+                robotics?</span></h3>
+        <a href="mailto:rmstwn@gmail.com"
+            class="inline-flex items-center justify-center px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-black rounded-xl transition-all tracking-[0.2em] uppercase shadow-xl shadow-blue-600/20">
+            Email for Collaboration <i class="fa-solid fa-paper-plane ml-3"></i>
+        </a>
+        <p class="mt-20 text-[9px] text-slate-600 uppercase tracking-[0.4em]">
+            &copy; 2026 Rama Setyawan • Tokyo Metropolitan University
+        </p>
     </footer>
 
 </body>
